@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.devildev.me/</loc>
+    </url>
+    <url>
+        <loc>https://www.devildev.me/blog/</loc>
+    </url>
+    <url>
+        <loc>https://www.devildev.me/blog/markdown-test/</loc>
+        <lastmod>2022-09-16</lastmod>
+    </url>
+    <url>
+        <loc>https://www.devildev.me/contact/</loc>
+    </url>
+</urlset>

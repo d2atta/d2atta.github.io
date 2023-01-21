@@ -1,0 +1,12 @@
+base_url = "https://www.devildev.me"
+compile_sass = false
+build_search_index = false
+generate_feed = true
+feed_filename = "atom.xml"
+
+[markdown]
+highlight_code = true
+highlight_theme = "monokai"
+render_emoji = true
+
+[extra]
