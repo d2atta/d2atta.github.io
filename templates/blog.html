@@ -3,6 +3,7 @@
 <!-- heading -->
 {% block heading %}
 <h1>{{ section.title }}</h1>
+<p>{{ section.content | safe }} </p>
 {% endblock heading %}
 
 <!-- Main content -->
@@ -12,7 +13,9 @@
 <h1> {{ year }} </h1>
 <ul>
   {% for page in posts %}
+  {% if page.draft == "flase" %}
   <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  {% endif %}
   {% endfor %}
 </ul>
 {% endfor %}

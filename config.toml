@@ -1,4 +1,6 @@
-base_url = "https://www.devildev.me"
+base_url = "devildev.me"
+title = "Devildev"
+description = "Personal Website"
 compile_sass = false
 build_search_index = false
 generate_feed = true

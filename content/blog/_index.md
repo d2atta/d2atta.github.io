@@ -5,3 +5,4 @@ template = "blog.html"
 page_template = "page.html"
 +++
 
+Blogs are coming soon. :smile:
