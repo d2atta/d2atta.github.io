@@ -3,13 +3,77 @@
 <!-- heading -->
 {% block heading %}
 <h1>{{ section.title }}</h1>
+<center>
+        <h3> Hi, I am <b>Debarghya Datta</b>. A Master's student at IIT,Bhilai <br> doing a thesis on Medical Conversartional agents.
+        </h3>
+</center>
 {% endblock heading %}
 
 <!-- main content -->
 {% block content %}
-<article>
-	<center>
-		{{ section.content | safe }}
-	</center>
+<header>
+        <a href = "/cv.pdf">
+                <i>Resume</i>
+        </a>
+</header>
+<hr>
+<section>
+        <header>
+        {% set proj = get_page(path="landing/projects/index.md") %}
+        {% if proj %}
+        <h2>{{ proj.title | safe }}</h2>
+        <p>{{ proj.content | safe }}</p>
+        {% endif %}
+        </header>
+
+        {% for idx in [1,2,3] %}
+        {% set project = get_page(path="landing/projects/proj" ~ idx ~ ".md") %}
+
+        <aside>
+        <h3>{{ project.title | safe }}</h3>
+        <p>
+        {{ project.content | safe }}
+        <a href="{{ project.description | safe }}"><i>Details</i></a>
+        </p>
+        </aside>
+
+        {% endfor %}
+</section>
+</div>
+<hr>
+<article style="display:flex;justify-content: space-around;">
+        <section>
+        {% set skills = get_page(path="landing/skills.md") %}
+        {% if skills %}
+        <h2>{{ skills.title | safe }}</h2>
+        <p>{{ skills.content | safe }}</p>
+        {% endif %}
+        </section>
+
+        <section>
+        {% set tools = get_page(path="landing/tools.md") %}
+        {% if tools %}
+        <h2>{{ tools.title | safe }}</h2>
+        <p>{{ tools.content | safe }}</p>
+        {% endif %}
+        </section>
+</article>
+<hr>
+<article style="display:flex;justify-content: space-between;">
+        <section>
+        {% set education = get_page(path="landing/education.md") %}
+        {% if education %}
+        <h2>{{ education.title | safe }}</h2>
+        <p>{{ education.content | safe }}</p>
+        {% endif %}
+        </section>
+
+        <section>
+        {% set jobs = get_page(path="landing/jobs.md") %}
+        {% if jobs %}
+        <h2>{{ jobs.title | safe }}</h2>
+        <p>{{ jobs.content | safe }}</p>
+        {% endif %}
+        </section>
 </article>
 {% endblock content %}

@@ -15,7 +15,7 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.25, maximum-scale=1">
   <title>{{ config.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/mvp.css">
 
   {% if config.generate_feed %}
   <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
@@ -32,7 +32,7 @@
 			<ul>
 				<li><a href="https://notes.devildev.me">Notes</a></li>
 				<li><a href="/contact">Contact</a></li>
-				<li><a href="/cv.pdf">Resume</a></li>
+				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
 	{% block heading %}{% endblock %}

@@ -3,11 +3,11 @@
 <!-- heading -->
 {% block heading %}
 <h1>{{ section.title }}</h1>
-<p>{{ section.content | safe }} </p>
 {% endblock heading %}
 
 <!-- Main content -->
 {% block content %}
+<p>{{ section.content | safe }} </p>
 <article>
 {% for year, posts in section.pages | group_by(attribute="year") %}
 <h1> {{ year }} </h1>
