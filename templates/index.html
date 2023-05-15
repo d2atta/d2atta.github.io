@@ -2,9 +2,10 @@
 
 <!-- heading -->
 {% block heading %}
-<h1>{{ section.title }}</h1>
+<h1><i class="fa-solid fa-hand fa-bounce"></i> {{ section.title }}</h1>
 <center>
-        <h3> Hi, I am <b>Debarghya Datta</b>. A Master's student at IIT,Bhilai <br> doing a thesis on Medical Conversartional agents.
+        <h3>
+                Hi, I am <b>Debarghya Datta</b>. A Master's student at <a href="https://www.iitbhilai.ac.in/">IIT Bhilai</a><br> doing a thesis on Medical Conversational agents.
         </h3>
 </center>
 {% endblock heading %}
@@ -21,7 +22,7 @@
         <header>
         {% set proj = get_page(path="landing/projects/index.md") %}
         {% if proj %}
-        <h2>{{ proj.title | safe }}</h2>
+        <h2><i class="fa-solid fa-bars"></i> {{ proj.title | safe }}</h2>
         <p>{{ proj.content | safe }}</p>
         {% endif %}
         </header>
@@ -45,7 +46,7 @@
         <section>
         {% set skills = get_page(path="landing/skills.md") %}
         {% if skills %}
-        <h2>{{ skills.title | safe }}</h2>
+        <h2><i class="fa-solid fa-gear"></i> {{ skills.title | safe }}</h2>
         <p>{{ skills.content | safe }}</p>
         {% endif %}
         </section>
@@ -53,7 +54,7 @@
         <section>
         {% set tools = get_page(path="landing/tools.md") %}
         {% if tools %}
-        <h2>{{ tools.title | safe }}</h2>
+        <h2><i class="fa-solid fa-wrench"></i> {{ tools.title | safe }}</h2>
         <p>{{ tools.content | safe }}</p>
         {% endif %}
         </section>
@@ -63,7 +64,7 @@
         <section>
         {% set education = get_page(path="landing/education.md") %}
         {% if education %}
-        <h2>{{ education.title | safe }}</h2>
+        <h2><i class="fa-solid fa-building-columns"></i> {{ education.title | safe }}</h2>
         <p>{{ education.content | safe }}</p>
         {% endif %}
         </section>
@@ -71,7 +72,7 @@
         <section>
         {% set jobs = get_page(path="landing/jobs.md") %}
         {% if jobs %}
-        <h2>{{ jobs.title | safe }}</h2>
+        <h2><i class="fa-solid fa-briefcase"></i> {{ jobs.title | safe }}</h2>
         <p>{{ jobs.content | safe }}</p>
         {% endif %}
         </section>

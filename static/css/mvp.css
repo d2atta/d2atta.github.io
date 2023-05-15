@@ -30,7 +30,7 @@
         --color-accent: #0097fc4f;
         --color-bg: #333;
         --color-bg-secondary: #555;
-        --color-link: #0097fc;
+        --color-link: #BBC2E4;
         --color-secondary: #e20de9;
         --color-secondary-accent: #e20de94f;
         --color-shadow: #bbbbbb20;
@@ -321,12 +321,18 @@ input[type="submit"] {
 }
 
 a em,
-a i {
+a i:not(.footer) {
     border: 2px solid var(--color-link);
     border-radius: var(--border-radius);
     color: var(--color-link);
     display: inline-block;
     padding: 1rem 2rem;
+}
+i.footer{
+    color: var(--color-link);
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+    display: inline-block;
 }
 
 article aside a {

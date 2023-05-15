@@ -13,9 +13,11 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.25, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.25">
+  <meta name="description" content="Portfolio Website of Debarghya Datta">
   <title>{{ config.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
   <link rel="stylesheet" href="/css/mvp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
   {% if config.generate_feed %}
   <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
@@ -27,7 +29,7 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href='/'><img src="/logo.svg" height=30 width=120></a></li>
+				<li><a href='/' aria-label="home"><i class="fa-solid fa-house fa-xl footer"></i></a></li>
 			</ul>
 			<ul>
 				<li><a href="https://notes.devildev.me">Notes</a></li>
@@ -41,19 +43,19 @@
 		{% block content %} {% endblock %}
 	</main>
 	<footer>
-		<hr>
+		<hr style="margin:0">
 		<header style="padding:0">
 			<nav style="margin-bottom:0">
 				<ul>
-					<li><p><span>&#169;</span> 2023 Devildev</p></li>
+					<li><p><i class="fa-regular fa-copyright"></i> 2023 Devildev</p></li>
 				</ul>
 				<ul>
-					<li><p>Powered by <a href="https://getzola.org">Zola</a></p></li>
+                                        <li><p>Powered by <a href="https://getzola.org">Zola</a> & <a href="https://andybrewer.github.io/mvp/">MVP</a></p></li>
 				</ul>
 				<ul>
-					<li><a href='https://github.com/devildev98'><img src="/github.svg" width=20 height=20></a></li>
-					<li><a href='https://www.linkedin.com/in/deba-iitbh'><img src="/linkedin.svg" width=20 height=20></a></li>
-					<li><a href='/atom.xml'><img src="/rss.svg" width=20 height=20></a></li>
+					<li><a href='https://github.com/devildev98' aria-label="github"><i class="fa-brands fa-github fa-beat footer fa-lg"></i></a></li>
+					<li><a href='https://www.linkedin.com/in/deba-iitbh' aria-label="linkedin"><i class="fa-brands fa-linkedin footer fa-lg"></i></a></li>
+					<li><a href='/atom.xml' aria-label="rss"><i class="fa-solid fa-rss footer fa-lg"></i></a></li>
 				</ul>
 			</nav>
 		</header>

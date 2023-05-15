@@ -1,4 +1,4 @@
 +++
-title = "Konnichiwa (Hello)"
+title = "Konnichiwa"
 +++
 
