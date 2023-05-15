@@ -4,7 +4,7 @@ title = "Education"
 *July 2022 - May 2024 (Expected)*  
 Indian Institute of Technology, Bhilai  
 **Master of Technology (Computer Science)**  
-Coursework: ML, NLP, IR
+Coursework: ML, NLP, IR  
 **Cumulative GPA: 9.8/10.0**
 
 

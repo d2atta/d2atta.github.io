@@ -11,6 +11,6 @@ Identified quality issues and created test-reports
 
 *Apr 2020 - June 2020*  
 **HighRadius**  
-Tech Intern
+Tech Intern  
 Completed a full stack software project  
 One of the top performers in the Internship  
