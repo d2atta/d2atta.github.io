@@ -1,0 +1,59 @@
+---
+import { slugifyStr } from "@utils/slugify";
+import techIcons from "@assets/techIcons";
+import LinkButton from "./LinkButton.astro";
+import type { CollectionEntry } from "astro:content";
+
+export interface Props {
+  project?: string;
+  frontmatter: CollectionEntry<"project">["data"];
+}
+
+const { frontmatter } = Astro.props;
+const { title, description, techStack, coverImage, code } = frontmatter;
+---
+
+<div class="max-w-sm bg-skin-card/40 group flex flex-col rounded-lg">
+  <div class="h-min overflow-hidden rounded-t-lg">
+    <img
+      class="hover:scale-110 transition-all"
+      src={coverImage}
+      alt="project-cover"
+    />
+  </div>
+  <div class="px-6 py-4 h-fit flex-auto">
+    <a href={code} class="cardlink">
+      <h2 transition:name={slugifyStr(title)} class="cardtitle">
+        {title}
+      </h2>
+    </a>
+    <p class="content">{description}</p>
+  </div>
+  <div class="flex-none py-2 text-center">
+    {
+      techStack.map((tech) => (
+        <LinkButton href="#" title={tech} className="link-button" disabled>
+          <Fragment set:html={techIcons[tech]} />
+          <span class="sr-only">{tech}</span>
+        </LinkButton>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .cardlink {
+    @apply text-lg font-medium text-skin-accent decoration-dashed;
+    @apply underline-offset-4 focus-visible:no-underline;
+    @apply focus-visible:underline-offset-0;
+  }
+  .cardtitle {
+    @apply text-lg font-medium decoration-dashed hover:underline;
+  }
+  .content {
+    @apply text-ellipsis overflow-hidden;
+  }
+  .link-button {
+    @apply scale-125 p-2 hover:rotate-6 sm:p-2;
+  }
+</style>
