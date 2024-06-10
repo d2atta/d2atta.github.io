@@ -50,7 +50,7 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
         enthusiast. I write about Software engineering, Machine Learning, and
         other tech stuff.
       </p>
-      <p>
+      <!--      <p>
         Read the blog
 
         <LinkButton
@@ -66,7 +66,18 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
         >
           About
         </LinkButton> for more info.
-      </p>
+      </p> -->
+      Check out my <LinkButton
+        className="italic underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+        href="/cv.pdf"
+      >
+        Resume</LinkButton
+      > and <LinkButton
+        className="italic underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+        href="https://deba-notes.gitbook.io/nlp"
+      >
+        notes
+      </LinkButton> for more info.
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
