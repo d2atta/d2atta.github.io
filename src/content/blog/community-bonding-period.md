@@ -11,8 +11,6 @@ tags:
 description: Meeting all the contributors of DBpedia and GSoC'24
 ---
 
-![](https://www.dbpedia.org/wp-content/uploads/2024/05/DBpedia-and-GSoC-24_bonding-period.jpg)
-
 # Community Bonding Period
 
 After the contributors for Google Summer of Code (GSoC) 2024 were announced, the GSoC team organized a series of "welcome talks" and engaging activities, including the "GSoC Contributor Summit." These events were not only enjoyable but also incredibly helpful in clarifying various aspects of the GSoC process. It was a wonderful opportunity to interact with fellow contributors and gain insights into the journey ahead.

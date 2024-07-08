@@ -9,7 +9,7 @@ tags:
 description: "Work done in the first week of GSoC coding period."
 ---
 
-This is the first week of the coding period of GSoC where the main aim was to understand the current DBpedia Extraction Framework.
+This is the first week(27-31st May) of the coding period of GSoC where the main aim was to understand the current DBpedia Extraction Framework.
 
 ## Table of contents
 
