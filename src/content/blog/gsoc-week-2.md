@@ -12,7 +12,6 @@ description: "Work done in the 2nd week of GSoC coding period."
 This is the second week(3-7th June) of the coding period of GSoC where the main
 aim was to deploy the DIEF framework locally to understand the changes needed
 to increase the coverage of Hindi mappings.
-
 ![](@assets/images/week_2/eng_dbpedia1.png)
 
 ## Table of Contents

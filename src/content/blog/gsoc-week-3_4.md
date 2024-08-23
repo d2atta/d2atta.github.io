@@ -13,26 +13,64 @@ This is the third and forth week(17-21st June) of the coding period of GSoC wher
 
 ## Table of Contents
 
-## Configured Extractors
+## Extractor configuration
 
-We've configured several extractors, including:
+I have configured several extractors, discussed below, with some of the code changes:
 
 - RedirectExtractor: For managing redirects.
 - HomepageExtractor: To extract homepage URLs.
+
+  ```py
+   private val propertyNamesMap = Map(
+        #...,
+    +  "hi" -> Set("वेबसाइट"), # Homepage in hindi
+        #...,
+   )
+
+    private val externalLinkSectionsMap = Map(
+        # ...,
+    +   "hi" -> "बाहरी कड़ियाँ", # External Link in hindi
+        # ...,
+   )
+  ```
+
 - DisambiguationExtractor: For handling disambiguation pages.
+	```py
+	val NonFreeRegex = Map(
+		#...,
+	+   "hi" -> " (बहुविकल्पी)", // eg. https://hi.wikipedia.org/wiki/आयरलैण्ड_(बहुविकल्पी)
+		#...,
+	)
+	```
+	
 - TopicalConceptsExtractor: To identify and extract topical concepts.
 - ImageExtractorNew: To handle image extraction.
+	```py
+	val NonFreeRegex = Map(
+		#...,
+	+   "hi" -> """(?i)\{\{\s?non-free""".r,
+		#...,
+	)
+	```
+
 - Added Mappings for Different Infoboxes. Mappings for various infoboxes have been added, enhancing our ability to organize and categorize the data effectively.
+- Moreover the coverage of entities also increased from 60% to 70%.
 
-## Challenges and Solutions
+*Before*
+![Before](@assets/images/week_3_4/dief_stats.png)
+*After*
+![After](@assets/images/week_3_4/hindi_stats.png)
 
-1. Server Setup for Viewing Statistics
-   We encountered an issue with setting up the server to view statistics. However, this challenge was swiftly resolved with the assistance of another GSoC student, Meti. Collaborating on this solution has been a great example of teamwork and mutual support.
+All the extractors are also added to the properties file.
 
-## Action Items
+```toml
+extractors.hi=.MappingExtractor,.HomepageExtractor,.DisambiguationExtractor,.TopicalConceptsExtractor,.ImageExtractorNew,.AnchorTextExtractor,.CommonsResourceExtractor
+```
 
-1. Configure the Abstract Extractor for Hindi
-   We aim to configure the abstract extractor to support Hindi. This will involve tailoring the extractor to handle the nuances of the Hindi language.
+## Learning and Next Steps
 
-2. Increase Mapping Coverage of Hindi Mappings
-   In line with our mentors' suggestions, we will work on manually adding mappings to increase the Hindi coverage. This will be a significant step towards enhancing the inclusivity and richness of our dataset.
+1. **Challenges in Server Setup for Viewing Statistics:** I encountered an issue with setting up the server to view statistics. However, this challenge was swiftly resolved with the assistance of another GSoC contributor, Meti. Collaborating on this solution has been a great example of teamwork and mutual support.
+
+2. **Plan to Configure the Abstract Extractor for Hindi:** I aim to configure the abstract extractor to support Hindi. This will involve tailoring the extractor to handle the nuances of the Hindi language.
+
+3. **Increase Mapping Coverage of Hindi Mappings:** In line with our mentors' suggestions, I will work on manually adding mappings to increase the Hindi coverage. This will be a significant step towards enhancing the inclusivity and richness of our dataset.
