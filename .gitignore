@@ -27,6 +27,9 @@ pnpm-debug.log*
 # ignore Jampack cache files
 .jampack/
 
+# obsidian
+.obsidian
+
 # yarn
 .yarn/*
 !.yarn/patches
